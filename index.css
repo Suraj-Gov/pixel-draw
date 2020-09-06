@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pixel-size: 3.3rem;
+}
+
+html {
+  background-color: #121212;
+  color: #eeeeee;
+  margin: 1em;
+}
+
+.pixel-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 20rem;
+  width: 20rem;
+  margin: 0 auto;
+  border: 1px solid white;
+}
+
+.pixel {
+  height: var(--pixel-size);
+  width: var(--pixel-size);
+  background-color: red;
+  border: 0.2px solid #242424;
+}
+
+/* .pixel:hover {
+  filter: brightness(90%);
+}
+
+.pixel:hover:active {
+  filter: brightness(30%);
+} */
+
+@media only screen and (min-width: 768px) {
+  .pixel {
+    height: calc(var(--pixel-size) * 1.5);
+    width: calc(var(--pixel-size) * 1.5);
+  }
+  .pixel-container {
+    height: 30rem;
+    width: 30rem;
+  }
+}
